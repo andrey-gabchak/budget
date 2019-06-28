@@ -24,6 +24,7 @@
 		<java.version>12</java.version>
 		<lombok.version>1.18.8</lombok.version>
 		<flyway.version>5.0.3</flyway.version>
+		<orika.mapper.version>1.5.4</orika.mapper.version>
 	</properties>
 
 	<dependencyManagement>
@@ -64,6 +65,12 @@
 				<artifactId>postgresql</artifactId>
 				<version>${postgresql.version}</version>
 				<scope>runtime</scope>
+			</dependency>
+			<!--Orika Mapper -->
+			<dependency>
+				<groupId>ma.glasnost.orika</groupId>
+				<artifactId>orika-core</artifactId>
+				<version>${orika.mapper.version}</version>
 			</dependency>
 
 			<dependency>
