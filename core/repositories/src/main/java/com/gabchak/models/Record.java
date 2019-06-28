@@ -5,9 +5,12 @@ import lombok.Setter;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.time.LocalDateTime;
 
@@ -27,8 +30,11 @@ public class Record {
     private LocalDateTime dateTime;
     @Column(name = "comment")
     private String comment;
-    @Column(name = "fk_wallet_id")
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_wallet_id")
     private Wallet wallet;
-    @Column(name = "fk_category_id")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "fk_category_id")
     private Category category;
 }

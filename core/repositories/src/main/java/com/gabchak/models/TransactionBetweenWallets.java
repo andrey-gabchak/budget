@@ -8,12 +8,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
 
 @Getter
 @Setter
 @Entity
 @Table(name = "transaction_between_wallets")
+@PrimaryKeyJoinColumn(name = "id")
 public class TransactionBetweenWallets {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -27,8 +31,10 @@ public class TransactionBetweenWallets {
     @Column(name = "comment")
     private String comment;
 
-    @Column(name = "fk_income_wallet")
+    @ManyToOne
+    @JoinColumn(name = "fk_income_wallet")
     private Wallet incomeWallet;
-    @Column(name = "fk_expenditure_wallet")
+    @ManyToOne
+    @JoinColumn(name = "fk_expenditure_wallet")
     private Wallet expenditureWallet;
 }
