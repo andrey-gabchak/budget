@@ -10,7 +10,7 @@ CREATE TABLE wallet
 (
     id                          SERIAL       NOT NULL PRIMARY KEY,
     name                        VARCHAR(100) NOT NULL,
-    balance                     INT          NOT NULL,
+    balance                     NUMERIC(2)          NOT NULL,
     is_income                   BOOLEAN      NOT NULL,
     is_count_in_general_balance BOOLEAN      NOT NULL,
     fk_currency_id              INT,
