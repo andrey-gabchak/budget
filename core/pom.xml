@@ -17,4 +17,12 @@
         <module>services</module>
     </modules>
 
+    <dependencies>
+        <!--Orika Mapper -->
+        <dependency>
+            <groupId>ma.glasnost.orika</groupId>
+            <artifactId>orika-core</artifactId>
+        </dependency>
+    </dependencies>
+
 </project>
