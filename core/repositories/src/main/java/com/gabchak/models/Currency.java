@@ -26,4 +26,44 @@ public class Currency {
 
     @OneToMany(mappedBy = "currency", fetch = FetchType.LAZY)
     private Set<Wallet> wallets;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Boolean getMainCurrency() {
+        return isMainCurrency;
+    }
+
+    public void setMainCurrency(Boolean mainCurrency) {
+        isMainCurrency = mainCurrency;
+    }
+
+    public Double getExchangeRate() {
+        return exchangeRate;
+    }
+
+    public void setExchangeRate(Double exchangeRate) {
+        this.exchangeRate = exchangeRate;
+    }
+
+    public Set<Wallet> getWallets() {
+        return wallets;
+    }
+
+    public void setWallets(Set<Wallet> wallets) {
+        this.wallets = wallets;
+    }
 }

@@ -32,4 +32,60 @@ public class TransactionBetweenWallets {
     @ManyToOne
     @JoinColumn(name = "fk_expenditure_wallet")
     private Wallet expenditureWallet;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Double getIncomeSum() {
+        return incomeSum;
+    }
+
+    public void setIncomeSum(Double incomeSum) {
+        this.incomeSum = incomeSum;
+    }
+
+    public Double getExpendirureSum() {
+        return expendirureSum;
+    }
+
+    public void setExpendirureSum(Double expendirureSum) {
+        this.expendirureSum = expendirureSum;
+    }
+
+    public Double getCommision() {
+        return commision;
+    }
+
+    public void setCommision(Double commision) {
+        this.commision = commision;
+    }
+
+    public String getComment() {
+        return comment;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
+    public Wallet getIncomeWallet() {
+        return incomeWallet;
+    }
+
+    public void setIncomeWallet(Wallet incomeWallet) {
+        this.incomeWallet = incomeWallet;
+    }
+
+    public Wallet getExpenditureWallet() {
+        return expenditureWallet;
+    }
+
+    public void setExpenditureWallet(Wallet expenditureWallet) {
+        this.expenditureWallet = expenditureWallet;
+    }
 }

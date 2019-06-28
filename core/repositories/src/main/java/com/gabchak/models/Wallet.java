@@ -33,4 +33,60 @@ public class Wallet {
 
     @OneToMany(mappedBy = "wallet", fetch = FetchType.LAZY)
     private Set<Record> records;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(Double balance) {
+        this.balance = balance;
+    }
+
+    public Boolean getIncome() {
+        return isIncome;
+    }
+
+    public void setIncome(Boolean income) {
+        isIncome = income;
+    }
+
+    public Boolean getCountInGeneralBalance() {
+        return isCountInGeneralBalance;
+    }
+
+    public void setCountInGeneralBalance(Boolean countInGeneralBalance) {
+        isCountInGeneralBalance = countInGeneralBalance;
+    }
+
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
+    }
+
+    public Set<Record> getRecords() {
+        return records;
+    }
+
+    public void setRecords(Set<Record> records) {
+        this.records = records;
+    }
 }
