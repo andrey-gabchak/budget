@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+}
+
+group 'com.gabchak'
+version '0.0.1-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':service:dao')
+}

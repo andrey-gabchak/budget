@@ -1,1 +1,5 @@
 rootProject.name = 'budget-api'
+include (':service:dao')
+project(':service:dao').projectDir = file('modules/service/dao')
+include 'service'
+project(":service").projectDir = file('modules/service')
