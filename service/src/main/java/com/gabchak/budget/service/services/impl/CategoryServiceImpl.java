@@ -6,11 +6,13 @@ import com.gabchak.budget.service.dto.CategoryDto;
 import com.gabchak.budget.service.mappers.CategoryMapper;
 import com.gabchak.budget.service.services.CategoryService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Optional;
 
 @RequiredArgsConstructor
+@Service
 public class CategoryServiceImpl implements CategoryService {
 
   private final CategoryRepository repository;
