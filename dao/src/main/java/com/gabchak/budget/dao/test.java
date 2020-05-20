@@ -8,6 +8,6 @@ public class test {
   private final CategoryRepository repository;
 
   void some() {
-//    repository.save();
+    repository.findAll();
   }
 }
