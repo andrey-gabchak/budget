@@ -2,7 +2,7 @@ package com.gabchak.budget.service.services;
 
 import com.gabchak.budget.service.dto.CategoryDto;
 
-import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 public interface CategoryService {
@@ -13,5 +13,5 @@ public interface CategoryService {
 
   void deleteById(Integer id);
 
-  Collection<CategoryDto> findAll();
+  List<CategoryDto> findAll();
 }

@@ -8,7 +8,7 @@ import com.gabchak.budget.service.services.CategoryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -21,21 +21,23 @@ public class CategoryServiceImpl implements CategoryService {
   @Override
   public CategoryDto save(CategoryDto categoryDto) {
     Category category = mapper.map(categoryDto, Category.class);
-    return null;
+    Category saved = repository.save(category);
+    return mapper.map(saved, CategoryDto.class);
   }
 
   @Override
   public Optional<CategoryDto> findById(Integer id) {
-    return Optional.empty();
+    return repository.findById(id)
+        .map(category -> mapper.map(category, CategoryDto.class));
   }
 
   @Override
   public void deleteById(Integer id) {
-
+    repository.deleteById(id);
   }
 
   @Override
-  public Collection<CategoryDto> findAll() {
-    return null;
+  public List<CategoryDto> findAll() {
+    return mapper.mapAsList(repository.findAll(), CategoryDto.class);
   }
 }
