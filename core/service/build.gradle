@@ -16,5 +16,5 @@ dependencies {
     compile 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
     compile 'ma.glasnost.orika:orika-core'
-    compile project(':dao')
+    compile project(':core:dao')
 }

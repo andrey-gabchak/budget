@@ -16,5 +16,5 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
     compile 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
-    compile project(':service')
+    compile project(':core:service')
 }

@@ -1,5 +1,6 @@
 rootProject.name = 'budget-api'
-include 'dao'
-include 'service'
 include 'rest'
+include 'core'
+include 'core:dao'
+include 'core:service'
 
