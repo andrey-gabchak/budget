@@ -5,5 +5,5 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "RECEIPTS_CATEGORY")
-public class ReceiptsCategory extends Category {
+public class ReceiptsCategory extends BaseEntity {
 }

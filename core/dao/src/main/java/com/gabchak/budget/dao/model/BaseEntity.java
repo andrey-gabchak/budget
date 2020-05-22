@@ -13,7 +13,7 @@ import javax.persistence.MappedSuperclass;
 @Getter
 @Setter
 @MappedSuperclass
-abstract class Category {
+abstract class BaseEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer id;
